@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Submit a Recipe</title>
+</head>
+<body>
+
+<h1>Submit a New Recipe</h1>
+
+<form action="index.html" method="POST">
+  <label for="recipeName">Recipe Name:</label>
+  <input type="text" id="recipeName" name="recipeName">
+  <br>
+  <label for="ingredients">Ingredients:</label>
+  <textarea id="ingredients" name="ingredients" rows="5" cols="40"></textarea>
+  <br>
+  <label for="Instructions">Instructions:</label>
+  <textarea id="Instructions" name="Instructions" rows="5" cols="40"></textarea>
+  <br>
+  <input type="radio" id="easy" name="difficulty" value="Easy">
+  <label for="easy">Easy</label>
+  <input type="radio" id="medium" name="difficulty" value="Medium">
+  <label for="medium">Medium</label>
+  <input type="radio" id="hard" name="difficulty" value="Hard">
+  <label for="hard">Hard</label>
+  <br>
+  <input type="checkbox" id="vegetarian" name="diet" value="Vegetarian">
+  <label for="vegetarian">Vegetarian</label>
+  <input type="checkbox" id="vegan" name="diet" value="Vegan">
+  <label for="vegan">Vegan</label>
+  <input type="checkbox" id="glutenFree" name="diet" value="Gluten-Free">
+  <label for="glutenFree">Gluten-Free</label>
+  <input type="checkbox" id="other" name="diet" value="other">
+  <label for="other">Other</label>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
