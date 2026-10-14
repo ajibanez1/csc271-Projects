@@ -1,0 +1,48 @@
+
+/*body,h1,h2, p are for all pages*/
+body {
+    background-color: #e3dede;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: #f38484;
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f38484;
+}
+p{
+    text-align: justify;
+    font-family: "Lucida Console", monospace;
+    font-size: 18px;
+}
+/*class resizing the logo*/
+.logo{
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+}
+/*id to highlight the description of the page*/
+#content{
+    background-color: white;
+    padding: 20px;
+}
+
+/*Unvisited, visited, hover and active links*/
+a:link{
+    color: #5b80e3;
+}
+a:visited{
+    color:#795b8a;
+}
+a:hover{
+    text-decoration: underline;
+    color: #b23e59;
+}
+a:active{
+    color: #e10e0e;
+}
+
