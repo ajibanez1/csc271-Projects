@@ -47,9 +47,10 @@ paragraph[1].innerHTML += " <b>" + believeOrNo + "</b>";
 paragraph[2].textContent = message;
 
 paragraph[3].textContent = "My Zodiac Sign: " + leoSign; ;
-paragraph[4].textContent = "Benjii Zodiac Sign: " + libraSign;
-paragraph[5].textContent = "Nehemiah Zodiac Sign: " + aquariusSign;;
-
 paragraph[6].textContent = leoSign + " Horoscope: " + myDesc; ;
+
+paragraph[4].textContent = "Benjii Zodiac Sign: " + libraSign;
 paragraph[7].textContent = libraSign + " Horoscope: " + benjiiDesc;
+
+paragraph[5].textContent = "Nehemiah Zodiac Sign: " + aquariusSign;;
 paragraph[8].textContent = aquariusSign +" Horoscope: "+ nehemiahDesc;;
