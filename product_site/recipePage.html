@@ -2,21 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Recipe</title>
+    <title>Easy Margherita Pizza Recipe - PantryPal</title>
     <link rel="stylesheet" href="css/style.css">
 
+    <meta property="og:title" content="Easy Margherita Pizza Recipe - PantryPal">
+    <meta property="og:description" content="Make homemade Margherita pizza with simple ingredients and step-by-step instructions.">
+    <meta property="og:image" content="https://ajibanez.rhody.dev/csc271_projects/product_site/images/margheritaPizza.jpg">
+    <meta property="og:url" content="https://ajibanez.rhody.dev/csc271_projects/product_site/recipePage.html">
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-924ECJXSD1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-924ECJXSD1');
+    </script>
 </head>
 <body>
 <!--a generic pantry pic to have in the home page-->
-<a href="homep.html">Home Page</a>
-<a href="recipeResult.html">Recipes Page</a>
+<div class="header">
+    <img src="images/PantryPalLogo.png" alt="PantryPal logo" class="logo">
+    <!--a generic pantry pic to have in the home page-->
+    <img src="images/pantrypic.jpg" alt="pantry picture">
+    <a href="homep.html">Home Page</a>
+    <a href="recipeResult.html">Recipe Results Page</a>
+</div>
 <h1>Recipe page</h1>
 <p>this is where it will take you when you choose a recipe on the recipe result page</p>
 <p>it's going to have the name of the meal, the ingredients that you have, and instructions. You will also be able to favorite them</p>
 
 <hr>
 <h2>Example: Margherita Pizza </h2>
-<img src="images/margheritaPizza.jpg" alt="Margherita pizza" width="260" height="390">
+<img src="images/margheritaPizza.jpg" alt="Homemade Margherita pizza with tomato, mozzarella, and basil" width="260" height="390">
 <!--I used AI to make both of these tables-->
 <h2>Ingredients</h2>
 <table>
