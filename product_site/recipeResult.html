@@ -2,19 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Recipe Result page</title>
+    <title>PantryPal - Recipes by Ingredients</title>
     <link rel="stylesheet" href="css/style.css">
+    <meta property="og:title" content="PantryPal - Recipes by Ingredients">
+    <meta property="og:description" content="Explore easy recipes based on ingredients you already have in your kitchen.">
+    <meta property="og:image" content="https://ajibanez.rhody.dev/csc271_projects/product_site/images/pantrypic.jpg">
+    <meta property="og:url" content="https://ajibanez.rhody.dev/csc271_projects/product_site/recipeResult.html">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-924ECJXSD1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-924ECJXSD1');
+    </script>
 </head>
 <body>
-<img src="images/PantryPalLogo.png" alt="website logo" width="188" height="112">
-<!--planning on make this a header and the logo would overlap it-->
-<img src="images/header.png" alt="header logo" width="500" height="112">
-<!--Link to my homepage-->
+<div class="header">
+    <img src="images/PantryPalLogo.png" alt="website logo" class="logo">
+    <!--a generic pantry pic to have in the home page-->
+    <img src="images/pantrypic.jpg" alt="pantry picture">
+    <a href="homep.html">Home Page</a>
+    <a href="recipePage.html">Recipe Page</a>
+</div>
 <br>
-<a href="homep.html">Home Page</a>
-<a href="recipePage.html">Recipe Page</a>
-<!--Large header-->
 <h1>Recipes that match your Ingredients</h1>
 <br>
 <!--explaining this page-->
