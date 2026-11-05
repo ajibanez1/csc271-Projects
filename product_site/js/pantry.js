@@ -5,7 +5,7 @@ var flour = 2;
 var water = 0.75;
 var cheese = 8;
 
-// new amount 
+// new amount
 var servings = 4;
 var newflour = (flour/originalServings)*servings;
 var newWater = (water/originalServings)*servings;

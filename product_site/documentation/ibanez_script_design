@@ -1,0 +1,13 @@
+I am just going to do a simple change where I am going to have a section showing how much ingredients you need if you
+more servings (in this case 4, and also not all ingredients) later on I plan to add a calculator to do this.
+
+the goal with this is to help users if they dont want to make the whole recipe (or more). maybe the user doesnt have
+enough ingredients or they have a lot they want to use.
+
+The step I plan to do
+-Create pantry.js and link it to recipePage.html.
+-Store the recipe name, original servings, and ingredient amounts in variables.
+-Set the new number of servings to 4.
+-Use multiplication and division to calculate the new amounts.
+-Select the HTML elements using DOM methods.
+-Display the recipe name, servings, ingredients, and a message on the page.
