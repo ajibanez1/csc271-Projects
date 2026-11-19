@@ -2,6 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/labs/lab8_uri_mdb" vcs="Git" />
   </component>
 </project>
