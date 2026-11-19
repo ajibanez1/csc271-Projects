@@ -1,21 +1,55 @@
+//Function 1: calculating function for the servings
+function calculateServing(amount, originalServing, servings){
+    return (amount/originalServing)*servings;
+}
+
+//function 2: function for the recipe recommendations
+function recipeRecommendation(hasbread, hascheese, hasflour, hastomatoe){
+    var message ="";
+    if(hasbread) {
+        if(hascheese)
+            {message = "You can make a Grilled Cheese";}
+        else
+            {message = "Need cheese for a Grilled Cheese";}
+    }else if (hasflour) {
+        if(hascheese && hastomatoe)
+            {message = "You can make a pizza";}
+        else
+            {message = "missing an ingredient";}
+    }else
+        {message = "No recipe available for you";}
+    return message;
+}
+
+//function 3: function to show the recipes
+function showRecipes(){
+    var recipes=["Grilled cheese", "Margherita pizza"];
+    var recipeList= document.getElementById("recipes");
+    if(recipeList) {
+        for(var i = 0; i < recipes.length; i++) {
+            var item = document.createElement("li");
+            item.textContent=recipes[i];
+            item.className= "recipe";
+            recipeList.appendChild(item);
+        }
+    }
+}
+
+//Uses the first function to calculate the recipes
 if(document.getElementById("recipeName")) {
 
-// original amount of ingredients
     var recipeName = "Margherita Pizza";
     var originalServings = 2;
-    var flour = 2;
-    var water = 0.75;
-    var cheese = 8;
-
-// new amount 
     var servings = 4;
-    var newflour = (flour / originalServings) * servings;
-    var newWater = (water / originalServings) * servings;
-    var newCheese = (cheese / originalServings) * servings;
 
+// new amount
+    var newflour = calculateServing(2,originalServings, servings);
+    var newWater = calculateServing(0.75,originalServings, servings);
+    var newCheese = calculateServing(8,originalServings, servings);
 
     var recipe = document.getElementById("recipeName");
     recipe.textContent = recipeName;
+
 
     var ingredients = document.getElementsByClassName("ingredients");
     ingredients[0].textContent = "Flour: " + newflour + " cups";
@@ -28,37 +62,27 @@ if(document.getElementById("recipeName")) {
     var results = document.querySelector("#result");
     results.innerHTML = "Enjoy you " + recipeName;
 }
+
+// displays the available recipes you can make
+if(document.getElementById("recipes")) {
+    showRecipes();
+}
+
 //Decision tree
 var button = document.getElementById("findRecipe");
+
 if (button) {
     button.addEventListener("click", function () {
-        var message =""
         var hasbread = document.getElementById("bread").checked;
         var hascheese = document.getElementById("cheese").checked;
         var hasflour = document.getElementById("flour").checked;
         var hastomatoe = document.getElementById("tomatoes").checked;
 
-        if(hasbread) {
-            if(hascheese) {message = "You can make a Grilled Cheese";}
-            else{message = "Need cheese for a Grilled Cheese";}
-        }else if (hasflour) {
-            if(hascheese && hastomatoe) {message = "You can make a pizza";}
-            else {message = "missing an ingredient";}
-        }else{message = "No recipe available for you";}
+        var message = recipeRecommendation(hasbread, hascheese, hasflour, hastomatoe);
         document.getElementById("recs").textContent = message;
     })
 }
-// For Loop
-var recipes=["grilled cheese", "margherita cheese"];
-var recipeList = document.getElementById("recipes");
-if(recipeList) {
-    for(var i = 0; i < recipes.length; i++) {
-        var item = document.createElement("li");
-        item.textContent=recipes[i];
-        item.className= "recipe";
-        recipeList.appendChild(item);
-    }
-}
+
 //Node
 var cards = document.querySelectorAll(".recipe");
 if (cards.length > 0) {
