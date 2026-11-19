@@ -32,40 +32,56 @@
 <h1>PantryPal</h1>
 <h1>Find Easy Recipes With Ingredients You Have</h1>
 <hr>
+
+<h2>Find Recipes: Select the ingredients you have:</h2>
+
+<label><input type="checkbox" id="bread">Bread</label>
+<label><input type="checkbox" id="cheese">Cheese</label>
+<label><input type="checkbox" id="flour">Flour</label>
+<label><input type="checkbox" id="tomatoes">Tomatoes</label>
+<button type="button" id="findRecipe">Find Recipes</button>
+
+<p id="recs"></p>
+<h2>Available Recipes</h2>
+<ul id="recipes"></ul>
+<h2>Cooking Tips</h2>
+<ul id = "tips"></ul>
+<hr>
 <div class = "content">
-<h2>Description</h2>
-<p>Do you have ingredients that you aren't using? or are hungry but don't know what to make? well that's where
-  <strong>PantryPal</strong> comes into play.
-comes in! PantryPal is a web app where you are able to input multiple ingredients from your kitchen and have PantryPals
-give you <em>high rated meals</em > based on your ingredients </p>
-<hr>
-<!--order list of steps of how to use the web app-->
+    <h2>Description</h2>
+    <p>Do you have ingredients that you aren't using? or are hungry but don't know what to make? well that's where
+        <strong>PantryPal</strong> comes into play.
+        comes in! PantryPal is a web app where you are able to input multiple ingredients from your kitchen and have PantryPals
+        give you <em>high rated meals</em > based on your ingredients </p>
+    <hr>
+    <!--order list of steps of how to use the web app-->
 
-<h3>How to use</h3>
-<ol>
-  <li>Enter your Ingredients</li>
-  <li>Press Search</li>
-  <li>Select a meal</li>
-  <li>And Start Cooking</li>
-</ol>
-<hr>
-<!--little question for user-->
+    <h3>How to use</h3>
+    <ol>
+        <li>Enter your Ingredients</li>
+        <li>Press Search</li>
+        <li>Select a meal</li>
+        <li>And Start Cooking</li>
+    </ol>
+    <hr>
+    <!--little question for user-->
 
-<p>Are you hungry?</p>
-<form>
-    <input type="radio" id="Yes" name="hungry?" value="Yes">
-    <label for="Yes">Yes</label><br>
-    <input type="radio" id="No" name="hungry?" value="No">
-    <label for="No">No</label><br>
-    <input type="submit" value="Submit">
-</form>
-<hr>
-<!--Fun links-->
-<a href="https://www.tasty.co" target="_blank">good recipes</a>
-<br>
-<!--Used Ai for this one because I didnt know how to do this-->
+    <p>Are you hungry?</p>
+    <form>
+        <input type="radio" id="Yes" name="hungry?" value="Yes">
+        <label for="Yes">Yes</label><br>
+        <input type="radio" id="No" name="hungry?" value="No">
+        <label for="No">No</label><br>
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+    <!--Fun links-->
+    <a href="https://www.tasty.co" target="_blank">good recipes</a>
+    <br>
+    <!--Used Ai for this one because I didnt know how to do this-->
 
-<a href="mailto:ajibanez@uri.edu">Contact Me</a>
+    <a href="mailto:ajibanez@uri.edu">Contact Me</a>
 </div>
+<script src="js/pantry.js"></script>
 </body>
 </html>
