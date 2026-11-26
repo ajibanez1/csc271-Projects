@@ -36,31 +36,38 @@ function showRecipes(){
 }
 
 //Uses the first function to calculate the recipes
-if(document.getElementById("recipeName")) {
+var updateButton = document.getElementById("servingsButton");
+function updateRecipe(){
 
-    var recipeName = "Margherita Pizza";
     var originalServings = 2;
-    var servings = 4;
+    // gets the serving number from the user
+    var servings = Number(document.getElementById("servings").value);
 
-// new amount
-    var newflour = calculateServing(2,originalServings, servings);
-    var newWater = calculateServing(0.75,originalServings, servings);
-    var newCheese = calculateServing(8,originalServings, servings);
+    var message = document.getElementById("servingsInfo");
 
-    var recipe = document.getElementById("recipeName");
-    recipe.textContent = recipeName;
+    // new amount. checks if the new number is positive
+    if(servings >0 && Number.isInteger(servings)){
+        var newflour = calculateServing(2,originalServings, servings);
+        var newWater = calculateServing(0.75,originalServings, servings);
+        var newCheese = calculateServing(8,originalServings, servings);
 
+        var ingredients = document.getElementsByClassName("ingredients");
+        ingredients[0].textContent = "Flour: " + newflour + " cups";
+        ingredients[1].textContent = "Water: " + newWater + " cups";
+        ingredients[2].textContent = "Cheese: " + newCheese + " oz";
 
-    var ingredients = document.getElementsByClassName("ingredients");
-    ingredients[0].textContent = "Flour: " + newflour + " cups";
-    ingredients[1].textContent = "Water: " + newWater + " cups";
-    ingredients[2].textContent = "Cheese: " + newCheese + " oz";
+        message.textContent = "this makes " + servings + " serving";
+        message.style.color = "green";
 
-    var para = document.getElementsByTagName("p");
-    para[2].textContent = "This makes " + servings + " servings";
-
-    var results = document.querySelector("#result");
-    results.innerHTML = "Enjoy you " + recipeName;
+        document.getElementById("result").textContent = "Enjoy your pizza!";
+    }else{
+        message.textContent = "Please put a real number";
+        message.style.color = "red";
+    }
+}
+// if the button is on the page then its going tor run the function
+if(updateButton){
+    updateButton.addEventListener("click", updateRecipe);
 }
 
 // displays the available recipes you can make
